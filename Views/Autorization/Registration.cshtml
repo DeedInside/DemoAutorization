@@ -1,0 +1,32 @@
+﻿@model DemoAutorization.Models.User
+<div>
+    <h1>регистрация</h1>
+
+    <div>
+        <form method="post" asp-action="Registration" asp-controller="Autorization" asp-antiforgery="true">
+            <div>
+                <label>Логин:</label>
+                <input  type="text" asp-for="Login"/>
+                <span asp-validation-for="Login" ></span>
+                
+            </div>
+            <div>
+                <label>Пароль:</label>
+                <input type="text" asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div>
+                <label>Name:</label>
+                <input type="text" asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <input type="submit" value="зарегестрировать" />
+        </form>
+    </div>
+</div>
+
